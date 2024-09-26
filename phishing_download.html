@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing Test Page</title>
+</head>
+<body>
+    <h1>Phishing Test Page</h1>
+    <p>Click the button below to download a safe malware detection test.</p>
+    <button onclick="downloadScript()">Download EICAR Test Script (ZIP)</button>
+
+    <script>
+        function downloadScript() {
+            window.location.href = 'eicar_test_script.zip'; // Path to the zip file
+        }
+    </script>
+
+    <h2>Friendly Usage Tip</h2>
+    <p>After downloading the EICAR Test Script (ZIP), your macOS system may automatically extract it, or it may remain as a ZIP file in your Downloads folder. Follow the appropriate instructions below:</p>
+
+    <h3>If the ZIP file is automatically extracted:</h3>
+    <ol>
+        <li>Locate the <code>eicar_test_script.sh</code> file in your Downloads folder.</li>
+        <li>Open a Terminal window and run the following command:</li>
+    </ol>
+    <pre>
+        <code>
+chmod +x ~/Downloads/eicar_test_script.sh && ~/Downloads/eicar_test_script.sh
+        </code>
+    </pre>
+
+    <h3>If the ZIP file is not automatically extracted:</h3>
+    <ol>
+        <li>Locate the downloaded <code>eicar_test_script.zip</code> file in your Downloads folder.</li>
+        <li>Double-click the ZIP file to extract its contents.</li>
+        <li>Open a Terminal window and run the following commands:</li>
+    </ol>
+    <pre>
+        <code>
+unzip ~/Downloads/eicar_test_script.zip -d ~/Downloads/
+chmod +x ~/Downloads/eicar_test_script.sh
+~/Downloads/eicar_test_script.sh
+        </code>
+    </pre>
+
+    <p>This process will simulate a phishing attack by running the EICAR test file, which should be detected by your antivirus software as a safe test alert.</p>
+</body>
+</html>
